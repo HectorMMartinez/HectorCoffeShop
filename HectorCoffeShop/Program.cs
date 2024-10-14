@@ -1,7 +1,9 @@
+using HectorCoffeShop.Models;
+using Microsoft.Extensions.Configuration;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddControllersWithViews();
+// Add services to the container
 
 var app = builder.Build();
 
