@@ -1,9 +1,12 @@
+using Microsoft.EntityFrameworkCore;
 using HectorCoffeShop.Models;
 using Microsoft.Extensions.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container
+builder.Services.AddDbContext<HectorCoffeShopContext>(options =>
+        options.UseSqlServer(builder.Configuration.GetConnectionString("Connection")));
 
 var app = builder.Build();
 
